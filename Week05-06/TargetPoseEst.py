@@ -9,7 +9,7 @@ from YOLO.detector import Detector
 
 # list of target fruits and vegs types
 # Make sure the names are the same as the ones used in your YOLO model
-TARGET_TYPES = ['orange', 'lemon', 'lime', 'tomato', 'capsicum', 'potato', 'pumpkin', 'garlic']
+TARGET_TYPES = ['orange', 'lemon', 'pear', 'tomato', 'capsicum', 'potato', 'pumpkin', 'garlic']
 
 
 def estimate_pose(camera_matrix, obj_info, robot_pose):
@@ -36,7 +36,7 @@ def estimate_pose(camera_matrix, obj_info, robot_pose):
     ######### Replace with your codes #########
     # TODO: measure actual sizes of targets [width, depth, height] and update the dictionary of true target dimensions
     target_dimensions_dict = {'orange': [1.0,1.0,1.0], 'lemon': [1.0,1.0,1.0], 
-                              'lime': [1.0,1.0,1.0], 'tomato': [1.0,1.0,1.0], 
+                              'pear': [1.0,1.0,1.0], 'tomato': [1.0,1.0,1.0], 
                               'capsicum': [1.0,1.0,1.0], 'potato': [1.0,1.0,1.0], 
                               'pumpkin': [1.0,1.0,1.0], 'garlic': [1.0,1.0,1.0]}
     #########

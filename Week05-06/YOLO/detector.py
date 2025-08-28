@@ -13,7 +13,7 @@ class Detector:
         self.class_colour = {
             'orange': (0, 165, 255),
             'lemon': (0, 255, 255),
-            'lime': (0, 255, 0),
+            'pear': (0, 128, 0),
             'tomato': (0, 0, 255),
             'capsicum': (255, 0, 0),
             'potato': (255, 255, 0),

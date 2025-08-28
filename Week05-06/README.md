@@ -9,7 +9,7 @@
 ## Introduction
 In M2, your PenguinPi robot will learn to recognise different types of fruit and veg via its camera. It will also estimate where these objects are located in the supermarket (arena) based on the actual size of the object, the size of the bounding box of the observed object in its camera view, and its own location at the time of observation using SLAM (M1). 
 
-There are 8 possible types of fruits and vegs for the classification model to recognise from, namely orange, lemon, pear, tomato, capsicum, potato, pumpkin, and garlic. These fruits and veg will be in the 2.4m x 2.4m arena in addition to the 10 ARUCO markers. There may be duplicate objects from the same type, or types of object not appearing in the arena, e.g., 2 oranges, 2 lemon, 1 pear, 1 tomato, 2 capsicum, 1 pumpkin, 1 garlic (no potato). The arena may have other distractor fruits/veg (ie. different coloured capsicum), or items that are not part of the original package of fruits / vegs. 
+There are 8 possible types of fruits and vegs for the classification model to recognise from, namely orange, lemon, pear, tomato, capsicum, potato, pumpkin, and garlic. These fruits and veg will be in the 2.4m x 2.4m arena in addition to the 10 ARUCO markers. There may be duplicate objects from the same type, or types of object not appearing in the arena, e.g., 2 oranges, 2 lemon, 1 pear, 1 tomato, 2 capsicum, 1 pumpkin, 1 garlic (no potato). The arena may have other coloured target fruits/veg (ie. different coloured capsicum), or items that are not part of the original package of fruits / vegs. 
 
 The fruits and vegs will stand upstraight as shown in the photo when placed in the arena, e.g., the garlic won't be lying on its side.
 

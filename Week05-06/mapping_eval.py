@@ -3,7 +3,7 @@ import numpy as np
 from copy import deepcopy
 
 # list of target fruit and veg types
-TARGET_TYPES = ['pear', 'lemon', 'pear', 'tomato', 'capsicum', 'potato', 'pumpkin', 'garlic']
+TARGET_TYPES = ['orange', 'lemon', 'pear', 'tomato', 'capsicum', 'potato', 'pumpkin', 'garlic']
 
 ####################################
 # read ground-truth map containing both ARUCO and target poses

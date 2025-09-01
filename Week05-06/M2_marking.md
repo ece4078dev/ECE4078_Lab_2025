@@ -9,7 +9,7 @@
 ## Evaluation
 Your M2 score consists of two parts: the accuracy of your YOLO detector for classifying the type of a target object, and the accuracy of your estimated map containing the location of the 10 targets in the arena.
 
-The performance of your YOLO detector worths 30pts. You'll demonstrate your trained YOLO model on a set of 10 testing images, each image containing one fruit/veg. For each testing image, if the predicted class label is correct, you'll receive 2pts. The detector evaluation is run on your computer without using the robot (pass the set of marking images to your trained YOLO model and show a visualisation of the predicted bounding boxes and labels):
+The performance of your YOLO detector worths 30pts. You'll demonstrate your trained YOLO model on a set of 10 testing images, each image containing one fruit/veg. For each testing image, if the predicted class label is correct, you'll receive 3pts. The detector evaluation is run on your computer without using the robot (pass the set of marking images to your trained YOLO model and show a visualisation of the predicted bounding boxes and labels):
 
 ~~~
 detector_score = 3 x NumberOfCorrectPredictions

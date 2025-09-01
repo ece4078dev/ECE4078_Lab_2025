@@ -113,7 +113,7 @@ Run ```python TargetPoseEst.py```, which will read in the observation saved insi
 
 **Modify [TargetPoseEst.py](TargetPoseEst.py)** to estimate the locations of the fruits and vegs based on the detector's outputs and the robot's poses. 
 - You may improve the [estimate_pose function](TargetPoseEst.py#L15) for computing the target pose using the robot's pose, the detector's output, and the target's true dimensions in each image.
-- If your training image is in a different size than the robot's camera size of 640x480 pixels, remember to change [how the x_shift is computed in the estimate_pose_function](TargetPoseEst.py#L54)
+- If your training image is in a different size than the robot's camera size of 320x240 pixels, remember to change [how the x_shift is computed in the estimate_pose_function](TargetPoseEst.py#L54)
 - Replace the [merge_estimation function](TargetPoseEst.py#L69) with your own codes to merge the estimations from multiple observations using filtering or clustering approaches instead of always taking the first estimation of a target type.
 - In the testing arena, the fruits/vegs will be at least 15cm apart, but a fruit/veg may be within 15cm of a marker block.
 - The [TargetPoseEst.py](TargetPoseEst.py) generates an estimation result file as "lab_output/targets.txt", which is then used to be compared against the groundtruth map for computing the target pose estimation errors.

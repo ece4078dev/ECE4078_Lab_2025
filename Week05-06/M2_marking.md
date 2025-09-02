@@ -9,7 +9,40 @@
 ## Evaluation
 Your M2 score consists of two parts: the accuracy of your YOLO detector for classifying the type of a target object, and the accuracy of your estimated map containing the location of the 10 targets in the arena.
 
-The performance of your YOLO detector worths 30pts. You'll demonstrate your trained YOLO model on a set of 10 testing images, each image containing one fruit/veg. For each testing image, if the predicted class label is correct, you'll receive 3pts. The detector evaluation is run on your computer without using the robot (pass the set of marking images to your trained YOLO model and show a visualisation of the predicted bounding boxes and labels):
+The performance of your YOLO detector worths 30pts. You'll demonstrate your trained YOLO model on a set of 10 testing images. The detector evaluation is run on your computer without using the robot (pass the set of marking images to your trained YOLO model and show a visualisation of the predicted bounding boxes and labels). Each image may contain up to 4 fruits/vegetables. Some are **targets**, and some are **distractors**.
+
+The score for each image is determined as follows:
+
+#### 3 points – An image is marked correct only if:
+- All targets are detected with bounding boxes that clearly cover the majority of the object (at least two-thirds of it) and have the correct class labels.  
+  *Some examples of what will be considered acceptable can be found below.*  
+- No targets are missed.  
+- No distractors are detected (i.e. nothing drawn around fruits/vegetables that are not in the target list).
+
+#### 0 points – If there is any mistake in that image, including:
+- A target is not detected  
+- A target is detected but given the wrong label  
+- A distractor is incorrectly detected  
+- Any extra/false detections  
+
+#### Examples of Correct vs Incorrect Bounding Box Sizes
+
+Below are example outputs showing what is considered an acceptable bounding box size and placement. The **leftmost image** is correct (3 points). All others are unacceptable (0 points).
+
+<p align="center">
+  <img src="Screenshots/bounding_box_good" alt="Correct bounding box" width="180"/>
+  <img src="Screenshots/bounding_box_bad_1" alt="Wrong bounding box 1" width="180"/>
+  <img src="Screenshots/bounding_box_bad_2" alt="Wrong bounding box 2" width="180"/>
+  <img src="Screenshots/bounding_box_bad_3" alt="Wrong bounding box 3" width="180"/>
+  <img src="Screenshots/bounding_box_bad_4" alt="Wrong bounding box 4" width="180"/>
+</p>
+
+**Example:**  
+If an image contains a pear (target), a lemon (target), and a lime (distractor), you will only receive 3 points if your detector produces bounding boxes with correct labels for both the pear and the lemon, and does not produce any detection for the lime.  
+
+You will receive 0 points if the lime is detected, if either the pear or lemon is missed, if either is detected with the wrong label, or if any extra bounding box appears.
+#### Optional Submission
+You may save the visualised output images from your detector run and submit them along with your code. This allows the teaching team to verify your results afterwards if there are any questions or discrepancies during marking.
 
 ~~~
 detector_score = 3 x NumberOfCorrectPredictions

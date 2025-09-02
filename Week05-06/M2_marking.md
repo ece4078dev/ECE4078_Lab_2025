@@ -30,11 +30,11 @@ The score for each image is determined as follows:
 Below are example outputs showing what is considered an acceptable bounding box size and placement. The **leftmost image** is correct (3 points). All others are unacceptable (0 points).
 
 <p align="center">
-  <img src="Screenshots/bounding_box_good" alt="Correct bounding box" width="180"/>
-  <img src="Screenshots/bounding_box_bad_1" alt="Wrong bounding box 1" width="180"/>
-  <img src="Screenshots/bounding_box_bad_2" alt="Wrong bounding box 2" width="180"/>
-  <img src="Screenshots/bounding_box_bad_3" alt="Wrong bounding box 3" width="180"/>
-  <img src="Screenshots/bounding_box_bad_4" alt="Wrong bounding box 4" width="180"/>
+  <img src="Screenshots/bounding_box_good.png" alt="Correct bounding box" width="180"/>
+  <img src="Screenshots/bounding_box_bad_1.png" alt="Wrong bounding box 1" width="180"/>
+  <img src="Screenshots/bounding_box_bad_2.png" alt="Wrong bounding box 2" width="180"/>
+  <img src="Screenshots/bounding_box_bad_3.png" alt="Wrong bounding box 3" width="180"/>
+  <img src="Screenshots/bounding_box_bad_4.png" alt="Wrong bounding box 4" width="180"/>
 </p>
 
 **Example:**  

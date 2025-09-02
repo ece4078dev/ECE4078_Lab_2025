@@ -14,8 +14,7 @@ The performance of your YOLO detector worths 30pts. You'll demonstrate your trai
 The score for each image is determined as follows:
 
 #### 3 points – An image is marked correct only if:
-- All targets are detected with bounding boxes that clearly cover the majority of the object (at least two-thirds of it) and have the correct class labels.  
-  *Some examples of what will be considered acceptable can be found below.*  
+- All targets are detected with bounding boxes that clearly cover the majority of the object (at least two-thirds of it) and have the correct class labels.  *Some examples of what will be considered acceptable can be found below.*  
 - No targets are missed.  
 - No distractors are detected (i.e. nothing drawn around fruits/vegetables that are not in the target list).
 
@@ -24,6 +23,11 @@ The score for each image is determined as follows:
 - A target is detected but given the wrong label  
 - A distractor is incorrectly detected  
 - Any extra/false detections  
+
+**Example:**  
+If an image contains a pear (target), a lemon (target), and a lime (distractor), you will only receive 3 points if your detector produces bounding boxes with correct labels for both the pear and the lemon, and does not produce any detection for the lime.  
+
+You will receive 0 points if the lime is detected, if either the pear or lemon is missed, if either is detected with the wrong label, or if any extra bounding box appears.
 
 #### Examples of Correct vs Incorrect Bounding Box Sizes
 
@@ -37,10 +41,6 @@ Below are example outputs showing what is considered an acceptable bounding box 
   <img src="Screenshots/bounding_box_bad_4.png" alt="Wrong bounding box 4" width="180"/>
 </p>
 
-**Example:**  
-If an image contains a pear (target), a lemon (target), and a lime (distractor), you will only receive 3 points if your detector produces bounding boxes with correct labels for both the pear and the lemon, and does not produce any detection for the lime.  
-
-You will receive 0 points if the lime is detected, if either the pear or lemon is missed, if either is detected with the wrong label, or if any extra bounding box appears.
 #### Optional Submission
 You may save the visualised output images from your detector run and submit them along with your code. This allows the teaching team to verify your results afterwards if there are any questions or discrepancies during marking.
 

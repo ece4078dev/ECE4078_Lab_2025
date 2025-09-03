@@ -42,8 +42,9 @@ Below are example outputs showing what is considered an acceptable bounding box 
   <img src="Screenshots/bounding_box_bad_4.png" alt="Wrong bounding box 4" width="150"/>
 </p>
 
-#### Optional Submission
-You may save the visualised output images from your detector run and submit them along with your code. This allows the teaching team to verify your results afterwards if there are any questions or discrepancies during marking.
+#### Dispute Resolution
+All object detection results will be checked and marked during the lab.  
+If you believe there is an issue with how your detections are assessed, you must raise it **on the spot** with the teaching staff. Disputes will not be reviewed afterwards, so make sure to clarify any concerns during your lab session.
 
 ~~~
 detector_score = 3 x NumberOfCorrectPredictions

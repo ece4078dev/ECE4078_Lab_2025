@@ -31,14 +31,15 @@ You will receive 0 points if the lime is detected, if either the pear or lemon i
 
 #### Examples of Correct vs Incorrect Bounding Box Sizes
 
-Below are example outputs showing what is considered an acceptable bounding box size and placement. The **leftmost image** is correct (3 points). All others are unacceptable (0 points).
+Below are example outputs showing what is considered an acceptable bounding box size and placement. The **two leftmost image** are correct (3 points). All others are unacceptable (0 points).
 
 <p align="center">
-  <img src="Screenshots/bounding_box_good.png" alt="Correct bounding box" width="180"/>
-  <img src="Screenshots/bounding_box_bad_1.png" alt="Wrong bounding box 1" width="180"/>
-  <img src="Screenshots/bounding_box_bad_2.png" alt="Wrong bounding box 2" width="180"/>
-  <img src="Screenshots/bounding_box_bad_3.png" alt="Wrong bounding box 3" width="180"/>
-  <img src="Screenshots/bounding_box_bad_4.png" alt="Wrong bounding box 4" width="180"/>
+  <img src="Screenshots/bounding_box_good.png" alt="Correct bounding box" width="150"/>
+  <img src="Screenshots/bounding_box_good_1.png" alt="Correct bounding box" width="150"/>
+  <img src="Screenshots/bounding_box_bad_1.png" alt="Wrong bounding box 1" width="150"/>
+  <img src="Screenshots/bounding_box_bad_2.png" alt="Wrong bounding box 2" width="150"/>
+  <img src="Screenshots/bounding_box_bad_3.png" alt="Wrong bounding box 3" width="150"/>
+  <img src="Screenshots/bounding_box_bad_4.png" alt="Wrong bounding box 4" width="150"/>
 </p>
 
 #### Optional Submission

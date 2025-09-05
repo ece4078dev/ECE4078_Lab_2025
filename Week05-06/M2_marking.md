@@ -61,6 +61,8 @@ This computes the Euclidean distance between each target's true location in "tru
 
 Please note that [mapping_eval.py](mapping_eval.py) is case sensitive. All target labels in your generated estimation map should be in lower case as shown in the [example est map](lab_output/targets.txt) and the groundtruth maps on github, e.g., use "lemon" instead of "Lemon" or "LEMON". If you've made a typo when labelling your YOLO training dataset, please make sure to edit your TargetPoseEst.py so that the printed estimation map is in the correct format.
 
+[New] Additionally, note that the indices of the fruit and veg in the map do not matter in this script, it will attempt to find the minimum error where possible, however, if your map has too many of a type of target, an average will be used instead.
+
 For M2, the object mapping task will also have 3 different difficulty levels with 3 different marking scales. These are as follows:
 
 - Level 1: You will map an arena of 10 Aruco Markers and 10 Objects (There will be repetitions) (Max 40/70)
@@ -163,7 +165,7 @@ Note: within the 20min marking time limit, you may perform detection of the mark
     - You are not allowed to change anything in the downloaded submission of your implementation, except for the camera and wheel calibration parameters. Your code can also take in arguments at the time of execution. However, you are NOT allowed to give inputs related to the arena setup or object locations/types as command line arguments, an extreme example would be typing in the whole map manually as command line arguments (please don't). 
     - Switching between levels will be included within your demo time, so try to limit level switches to 1 or 2 times maximum.
 
-7. Submit the generated slam.txt and targets.txt maps (make sure SLAM and target maps are matching pairs for each run) as a zip to the Moodle map submission box for target_est_score marking
+7. Submit the generated slam.txt and targets.txt maps (make sure SLAM and target maps are matching pairs for each run and that you only submit one pair per run) as a zip to the Moodle map submission box for target_est_score marking
 
 8. Individual viva (short verbal assessment with the demonstrator) will be conducted, which will be used to scale your mark. See [example est map](../Week02-04/M1_marking_instructions.md) for more information. Furthermore, the same ITP across M2 and M3 will be used to scale your final M2 mark. Your total for M2 will be:
 

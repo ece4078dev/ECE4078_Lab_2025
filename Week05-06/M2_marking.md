@@ -61,7 +61,7 @@ This computes the Euclidean distance between each target's true location in "tru
 
 Please note that [mapping_eval.py](mapping_eval.py) is case sensitive. All target labels in your generated estimation map should be in lower case as shown in the [example est map](lab_output/targets.txt) and the groundtruth maps on github, e.g., use "lemon" instead of "Lemon" or "LEMON". If you've made a typo when labelling your YOLO training dataset, please make sure to edit your TargetPoseEst.py so that the printed estimation map is in the correct format.
 
-**[New] Additionally, note that the indices of the fruit and veg in the map do not matter in this script, it will attempt to find the minimum error where possible, however, if your map has too many of a type of target, an average will be used instead.**
+**[New] Note that the indices of the fruit and veg in the map do not matter in this script, it will attempt to find the minimum error where possible, however, if your map has too many of a type of target, an average will be used instead.**
 
 For M2, the object mapping task will also have 3 different difficulty levels with 3 different marking scales. These are as follows:
 

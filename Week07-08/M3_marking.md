@@ -10,7 +10,7 @@ You should first demonstrate the level you are confident with before attempting 
 	- [Level 1: Semi-auto navigation using waypoints](#level-1-semi-auto-navigation-using-waypoints)
 	- [Level 2: Autonomous navigation with a known map](#level-2-autonomous-navigation-with-a-known-map)
 	- [Level 3: Autonomous navigation with a partially known map](#level-3-autonomous-navigation-with-a-partially-known-map)
-    - [Level 4: Autonomous navigation with a minimal known map](#level-4-autonomous-navigation-with-a-minimal-known-map)
+    - [Level 4: Autonomous navigation with a minimally known map](#level-4-autonomous-navigation-with-a-minimally-known-map)
 - [Marking steps](#marking-steps)
 - [Marking checklist](#marking-checklist)
 
@@ -28,7 +28,7 @@ We have divided M3 into 4 levels based on the 4 main components which you could 
 	- The robot navigates around the arena autonomously
 	- You must navigate to targets on the shopping list in the specified order
 - Level 3: Fully-autonomous navigation with a partially known map (15 pts)
-	- A partial ground truth of the arena is provide
+	- A partial ground truth of the arena is provided
 	- The map only contains the locations of the ArUco markers and the shopping list objects
 	- The robot navigates around the arena autonomously
 	- You must navigate to targets on the shopping list in the specified order
@@ -47,7 +47,7 @@ For each level in M3, you will receive all the potints allocated to lower levels
 
 3. Penalty of -5pts each time the robot touches the arena boundary 
 
-4. If you have received four penalties (any of the penalties listed above) during a run, your run must stop.
+4. If you have received 5 penalties (any of the penalties listed above) during a run, your run must stop.
 
 5. The **condition** to be eligible to gain points for your run is determined by achieving a **qualified** run. For a **qualified** run we define stopping within a 0.25m radius qualifies navigation as a **success** and stopping within a 0.5m radius qualifies a navigation as a **valid attempt**. A run is deem **qualified** if it has at least any number of **successes** and/or **valid attempts**  equal to the attempted level + 1 (e.g levels 2/3/4 require 3/4/5 **successes** or **valid attempts**). After a **qualified run** is declared you will receive at all points allocated to the lower level/s. 
 	- For all levels except level 4, points for navigating successfully to a target will only be given for **successful** navigation to targets navigated within the correct order. 	

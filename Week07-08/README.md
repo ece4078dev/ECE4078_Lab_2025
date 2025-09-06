@@ -39,14 +39,14 @@ Please note that this skeleton code is only a general guide, you can (and we hig
 
 **Important notes:**
 - There is a 5pt penalty for every marker, object, or arena boundary that the robot collides into. A run with 5 penalties will be terminated whilst the timer continues. Make sure your implementation handles collision avoidance and the planned paths are within the arena boundaries.
-- The groundtruth maps are provided to you for M3 ONLY (you may choose not use it). Please be aware that in future milestones you will need to generate your own map estimated using your M1&M2 implementation.
+- The groundtruth maps are provided to you for M3 ONLY (you may choose not use it). Please be aware that in future assessments you will need to generate your own map estimated using your M1&M2 implementation.
 - There are three reference maps provided **for a practice arena** (different maps will be used during marking):
 	1. [M3_prac_map_full.txt](M3_prac_map_full.txt) - contains 10 fruits&vegs + 10 markers, it is used for 
 		- setting up the arena
 		- the true map input for Level 1 and Level 2 (refer to [marking scheme](#marking-schemes) for the level definitions)	
-	2. [M3_prac_map_most.txt](M3_prac_map_most.txt) - contains 5 target fruits&vegs + 10 markers, it is used for 
+	2. [M3_prac_map_part.txt](M3_prac_map_part.txt) - contains 5 target fruits&vegs + 10 markers, it is used for 
 		- the true map input for Level 3 (refer to [marking scheme](#marking-schemes) for the level definitions)
-    3. [M3_prac_map_part.txt](M3_prac_map_min.txt) - contains  10 markers, it is used for 
+    3. [M3_prac_map_min.txt](M3_prac_map_min.txt) - contains  10 markers, it is used for 
 		- the true map input for Level 4 (refer to [marking scheme](#marking-schemes) for the level definitions)
 - In addition to the groundtruth map for the practice arena, the [M3_prac_shopping_list.txt](M3_prac_shopping_list.txt) is also provided to you.
 - Below is a preview of the practice arena and the order of targets the robot needs to navigate to.
@@ -87,7 +87,7 @@ You may use any path planning algorithms you prefer, such as rapidly exploring r
 ## Path planning with a partially known map (Week 9)
 In this component, 5 obstacle fruits&vegs at locations unknown to the robot is present in the arena in addition to the 5 target fruits&vegs that the robot needs to navigate to. 
 
-To perform the navigation, your codes should only take the [mostly known groundtruth map](M3_prac_map_part.txt), where the locations of some of the objects (10 ArUco markers and 5 target fruits&vegs) in the arena are stored as input. **Once the Python script has started, you can enter no more than one command for the robot to start its task. You are not allowed to hard-code the waypoints or teleoperate the robot.**
+To perform the navigation, your codes should only take the [partially known groundtruth map](M3_prac_map_part.txt), where the locations of some of the objects (10 ArUco markers and 5 target fruits&vegs) in the arena are stored as input. **Once the Python script has started, you can enter no more than one command for the robot to start its task. You are not allowed to hard-code the waypoints or teleoperate the robot.**
 
 Building on top of the components described above, you will need to include
 1. A grocery detector (implemented in M2) to detect and estimate the location of the 5 obstacles, whose locations are initially unknown to the robot
@@ -96,7 +96,7 @@ Building on top of the components described above, you will need to include
 ## Path planning with a minimal map (Week 9)
 In this component, the robot does not know any of the fruits&veg locations, including the target fruits&veg. The robot is expected to explore the arena to find the target fruits&veg, and to stop within the specified radius of the targets at any given order. The intended target it is stopping at needs to be displayed on the GUI.
 
-To perform the navigation, your codes should only take the [minimal groundtruth map](M3_prac_map_min.txt), where the locations of some of the objects (10 ArUco markers) in the arena are stored as input. **Once the Python script has started, you can enter no more than one command for the robot to start its task. You are not allowed to hard-code the waypoints or teleoperate the robot.**
+To perform the navigation, your codes should only take the [minimally known groundtruth map](M3_prac_map_min.txt), where the locations of some of the objects (10 ArUco markers) in the arena are stored as input. **Once the Python script has started, you can enter no more than one command for the robot to start its task. You are not allowed to hard-code the waypoints or teleoperate the robot.**
 
 To build on all the previous levels, you will need to include:
 1. A plan to explore spaces in the arena with some known map of the ArUcos

@@ -303,8 +303,8 @@ if __name__ == '__main__':
         print(f'Average object pose estimation error after alignment: {np.mean(err_lst)}')
         print(f'Individual target accuracy ratings: {target_scores}')
         print('======')
-        print(f'Level 1 Target Estimation Error Score (0 to 70): = {target_pose_estimation_mark * 40}')
-        print(f'Level 2 Target Estimation Error Score (0 to 70): = {target_pose_estimation_mark * 50}')
+        print(f'Level 1 Target Estimation Error Score (0 to 40): = {target_pose_estimation_mark * 40}')
+        print(f'Level 2 Target Estimation Error Score (0 to 50): = {target_pose_estimation_mark * 50}')
         print(f'Level 3 Target Estimation Error Score (0 to 70): = {target_pose_estimation_mark * 70}')
 
 

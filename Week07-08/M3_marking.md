@@ -49,8 +49,8 @@ For each level in M3, you will receive all the potints allocated to lower levels
 
 4. If you have received 5 penalties (any of the penalties listed above) during a run, your run must stop.
 
-5. The **condition** to be eligible to gain points for your run is determined by achieving a **qualified** run. For a **qualified** run we define stopping within a 0.25m radius qualifies navigation as a **success** and stopping within a 0.5m radius qualifies a navigation as a **valid attempt**. A run is deem **qualified** if it has at least any number of **successes** and/or **valid attempts**  equal to the attempted level + 1 (e.g levels 2/3/4 require 3/4/5 **successes** or **valid attempts**). After a **qualified run** is declared you will receive at all points allocated to the lower level/s. 
-	- For all levels except level 4, points for navigating successfully to a target will only be given for **successful** navigation to targets navigated within the correct order. 	
+5. The **condition** to be eligible to gain points for your run is determined by achieving a **qualified** run. For a **qualified** run we define stopping within a 0.3m radius qualifies navigation as a **success** and stopping within a 0.5m radius qualifies a navigation as a **valid attempt**. A run is deemed **qualified** if it has at least any number of **successes** and/or **valid attempts**  equal to the attempted level + 1 (e.g levels 2/3/4 require 3/4/5 **successes** or **valid attempts**). After a **qualified run** is declared you will receive at all points allocated to the lower level/s. Additionally, **valid attempts** only apply in order navigation for levels 2 and 3.
+	- For all levels except level 4, points for navigating successfully to a target will only be given for **successful** navigation to targets navigated within the correct order.  	
 	- Penalties will only apply to successful navigation points (i.e if a level 2 run is **qualified** with 4 **successes** and 4 penalties, you will still receive 50 points)
 	- You may stop/cancel a run at any point, however if the robot is stopped (also by the robot itself or by having recived 5th penalty) before a run is **qualified**, you will receive zero points for that run. 
  	- Once the run is stopped, your mark for the run is finalised.
@@ -72,7 +72,7 @@ To attempt Level 1, the locations of all the objects in the arena will be given 
 
 You are **not allowed to teleoperate** the robot. You can only enter coordinate of the waypoints as input, or you may choose to do so via a GUI. You can input as many waypoints as you want to get to the targets. 
 
-The entire robot needs to be within 0.25m of the target and stop for 2s to indicate that it has found a target fruit/veg before moving onto the next target. You will get 0pt for a target if the robot is not within 0.25m of the target. You should confirm with the demonstrator to check whether the robot is close enough to the target. You will also need to reach the end condition (see above) for a run to qualify for marks.
+The entire robot needs to be within 0.3m of the target and stop for 2s to indicate that it has found a target fruit/veg before moving onto the next target. You will get 0pt for a target if the robot is not within 0.3m of the target. You should confirm with the demonstrator to check whether the robot is close enough to the target. You will also need to reach the end condition (see above) for a run to qualify for marks.
 
 Each target that you successfully navigate to will give you 10pt if you decide to perform Level 1:
 ``` 

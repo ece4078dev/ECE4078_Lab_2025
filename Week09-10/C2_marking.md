@@ -82,15 +82,17 @@ C2 will not be marked and carries no penalties or scores. However, the following
 
 2. Penalties each time the robot hits the boundary wall
 
-3. If you have received five penalties (any of the penalties listed above) during a mapping and/or navigation run, you will receive zero score for that run
-	- e.g. zero score for colliding into any object 5 times or collided into 2 objects + out of the boundary once
+3. **[Alignment with M3]** If you have received 5 penalties (any of the penalties listed above) during a navigation run, your run must stop.
+	- **[New]** You will not receive penalties for colliding with objects or boundary walls during manual (teleoperation) mapping for level 1/2. However, you cannot reset the arena until after the mapping run has completed. You will still received penalties for during attempts of level 3.
 
 4. When your robot has stopped moving by itself during a navigation run, you may stop that run, and then your navigation task score for that run will be calculated
 	- If you stop the run while the robot is moving, or if you manually stop the robot/script, you will receive zero navigation score for that run. This is to prevent teams from stopping the run when the robot reach a target by luck
 
-5. The **entire** robot has to stop for approximately 2 seconds within 0.3m of the target to be considered as a successful navigation to that target
+5. **[Alignment with M3]** For levels 1 and 2, points for navigating successfully to a target will only be given for **successful** navigation to targets navigated within the correct order.  	
+	- **In-order navigation** : The current target is considered in-order only if all prior attempted targets are earlier in the list.
 
-6. If the robot reaches the targets in the wrong order for levels 1 and 2, you will receive zero navigation score for that run
+6. The **entire** robot has to stop for approximately 2 seconds within 0.3m of the target to be considered as a successful navigation to that target and within 0.5m to be considered a valid attempt.
+	- **[New]** Your code must also output the current target that is being attempted (graphically, print to terminal, etc.) to avoid any issues around coincidentally stopping at later targets due to the in-order navigation definition and to be considered successful. For example, the robot must output that is attempting to navigate to a pear to collect a pear. Mapping an object is not enough to be considered a collection in level 3.
 
 7. We may review your code to see if you have implemented appropriate algorithms. To gain credit for the autonomous navigation, we must find evidence of path planning, or obstacle detection and avoidance (respectively) in your code. Successful navigation and/or collision avoidance by luck will not grant you those marks by default
 

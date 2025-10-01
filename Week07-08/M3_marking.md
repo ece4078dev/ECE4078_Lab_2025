@@ -22,7 +22,7 @@ We have divided M3 into 4 levels based on the 4 main components which you could 
 	- The full ground truth of the arena is provided
 	- You may only control the robot by providing waypoints (No Teleoperation in this demo!)
 	- You must navigate to targets on the shopping list in the specified order
-	- **Note waypoint navigation will not be available for the final demo**
+	- **Note: waypoint navigation will not be available for the final demo**
 - Level 2: Fully-autonomous navigation with a known map (20 pts)
 	- The full ground truth of the arena is provided
 	- The robot navigates around the arena autonomously
@@ -51,6 +51,10 @@ For each level in M3, you will receive all the potints allocated to lower levels
 
 5. The **condition** to be eligible to gain points for your run is determined by achieving a **qualified** run. For a **qualified** run we define stopping within a 0.3m radius qualifies navigation as a **success** and stopping within a 0.5m radius qualifies a navigation as a **valid attempt**. A run is deemed **qualified** if it has at least any number of **successes** and/or **valid attempts**  equal to the attempted level + 1 (e.g levels 2/3/4 require 3/4/5 **successes** or **valid attempts**). After a **qualified run** is declared you will receive at all points allocated to the lower level/s. Additionally, **valid attempts** only apply in order navigation for levels 2 and 3.
 	- For all levels except level 4, points for navigating successfully to a target will only be given for **successful** navigation to targets navigated within the correct order.  	
+		- **[New] In-order navigation** : The current target is considered in-order only if all prior attempted targets are earlier in the list.
+		- **[New] Attempt**:
+			- For levels 2-4: Your code must output the current target that is being attempted (graphically, print to terminal, etc.) to avoid any issues around coincidentally stopping at later targets due to the in-order navigation definition
+			- For level 1: Your team must state that the robot is stopping at the specified target
 	- Penalties will only apply to successful navigation points (i.e if a level 2 run is **qualified** with 4 **successes** and 4 penalties, you will still receive 50 points)
 	- You may stop/cancel a run at any point, however if the robot is stopped (also by the robot itself or by having recived 5th penalty) before a run is **qualified**, you will receive zero points for that run. 
  	- Once the run is stopped, your mark for the run is finalised.
@@ -66,6 +70,8 @@ For each level in M3, you will receive all the potints allocated to lower levels
 10. If you are performing semi-automatic navigation (Level 1), the waypoints you can provide are x,y coordinates. You can't specify driving instructions, such as distance / time to drive, or turning angles
 
 11. The robot must start at the origin (0,0,0). You can't teleoperate or manually place the robot next to the first target when starting the navigation.
+
+12. **[New]** You are only allowed one ground truth map within your folder during the demo, If you want to switch levels, you must inform a TA, and if the map needs to be swapped between levels, you must show proof that the current map inside the folder is correct (e.g opening the file and showing it's contents)
 
 ### Level 1: Semi-auto navigation using waypoints
 To attempt Level 1, the locations of all the objects in the arena will be given to you in the full groundtruth map. The search order of the target fruits is given in the shopping list.

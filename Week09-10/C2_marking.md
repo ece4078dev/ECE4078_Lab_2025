@@ -7,9 +7,16 @@
 
 The final demo is likely to be the same as C2, although minor details/rules/marking scheme are still subject to change. **PLEASE MAKE SURE YOU READ THE MARKING INSTRUCTIONS CAREFULLY.**
 
+## Key Changes for Final Demo
+With the release of the final demo, we just want to highlight some key changes in this document:
+- The in-order requirement is now removed from level 2
+- Added clarification for how different runs are scored
+- Link to the definition of qualified runs, in [Week11/README.md](../Week11/README.md#4-qualified-navigation-run-and-penalty-scheme-changes) are now included, note that this is slightly different from M3
+- Included reference to Viva being included in final demo
+
 ---
 ## Marking schemes
-C2 does not carry any weights in your grades. It is designed to ensure that you know everything necessary to attempt the final demo and give you time and demonstrate areas to improve.
+C2 does not carry any weight in your grades. It is designed to ensure that you know everything necessary to attempt the final demo and give you time and demonstrate areas to improve. Please go to the [marking scheme](../Week11/README.md#3-marking-scheme-breakdown) in the final demo folder for more details.
 
 ---
 ### Final Demo Task
@@ -56,22 +63,26 @@ You will perform a navigation task so that your robot can collect targets on its
 Your robot has to perform a **qualified navigation run**, similarly to the definition in [qualified navigation run](../Week07-08/M3_marking.md#evaluation), fully autonomously in order to get marks for this sub-task. The definition of a **qualified navigation run** currently links to the one in  M3, however these will be updated based on the final demo task.
 
 #### 3. Task Levels
-The task is separated into three task levels, these levels are:
-- Level 1: Manual Mapping and Fully-Autonomous Navigation 
+The final demo is separated into three levels, these levels are:
+- Level 1: Manual Mapping and Fully-Autonomous Navigation as separate tasks
 	- The robot can be teleoperated for the Mapping task
 	- The robot must navigate around the arena autonomously
 	- You must navigate to targets on the shopping list in the specified order
-- Level 2: Manual Mapping and Fully-Autonomous Navigation with Swapped Objects
+- Level 2: Manual Mapping and Fully-Autonomous Navigation with Displaced Objects as separate tasks
 	- The robot can be teleoperated for the Mapping task
 	- The robot must navigate around the arena autonomously
 	- After mapping occurs, target and/or obstacles objects will change locations
-    - You must navigate to targets on the shopping list in the specified order
+    - For location changes the following can occur:
+      - Shifting object locations
+      - Swapping locations of different objects (only fruits/veg) in the environment
+	- You may navigate to objects in any order
 - Level 3: Fully-Autonomous Mapping and Navigation
-	- The robot performs simultaneous mapping and navigation around the arena autonomously
+	- The robot performs simultaneous mapping and navigation around the arena autonomously as a single task
 	- You may navigate to objects in any order
 	- You are still provided a shopping list, but you do not need to navigate to the targets in the same order as the list. Due to the removal of shopping list order, you must clearly indicate if the robot is stopping for an object by printing the label of the specified object to terminal and notifying the TA of the robot's intention to stop at the specific target. 
 
-Mapping and Navigation are treated as 2 separate tasks for levels 1 and 2, whereas for level 3, mapping and navigation are considered a single combined task.
+For Levels 1 and 2, mapping and Navigation are treated as 2 separate tasks and you can attempt mapping and navigation runs in any order given a mapping run comes first. For level 3, mapping and navigation are considered a single combined task. An example order for the final demo could be to manually map once, attempt navigation twice, map again and then attempt simultaneous mapping and navigation (level 3) for a total of 5 runs (2 manual mapping runs, 2 autonomous navigation runs and 1 simultaneous mapping and navigation run). Inbetween any run, the arena will be reset (or rearranged in the case of swapping from level 2 navigation to any other task) for the current task.
+
 
 ### General Rules
 C2 will not be marked and carries no penalties or scores. However, the following rules are what will currently apply to the final demo and we recommend you practice attempts following them. The rules and values may change slightly or be confirmed as the final demo is finalised and any changes from these rules will be announced, so please be aware of them as is:
@@ -88,8 +99,8 @@ C2 will not be marked and carries no penalties or scores. However, the following
 4. When your robot has stopped moving by itself during a navigation run, you may stop that run, and then your navigation task score for that run will be calculated
 	- If you stop the run while the robot is moving, or if you manually stop the robot/script, you will receive zero navigation score for that run. This is to prevent teams from stopping the run when the robot reach a target by luck
 
-5. **[Alignment with M3]** For levels 1 and 2, points for navigating successfully to a target will only be given for **successful** navigation to targets navigated within the correct order.  	
-	- **In-order navigation** : The current target is considered in-order only if all prior attempted targets are earlier in the list.
+5. **[Alignment from M3]** For levels 1, points for navigating successfully to a target will only be given for **successful** navigation to targets navigated within the correct order.  	
+	- **In-order navigation** : The current target is considered in-order only if all prior attempted targets are earlier in the list for level 1.
 
 6. The **entire** robot has to stop for approximately 2 seconds within 0.3m of the target to be considered as a successful navigation to that target and within 0.5m to be considered a valid attempt.
 	- **[New]** Your code must also output the current target that is being attempted (graphically, print to terminal, etc.) to avoid any issues around coincidentally stopping at later targets due to the in-order navigation definition and to be considered successful. For example, the robot must output that is attempting to navigate to a pear to collect a pear. Mapping an object is not enough to be considered a collection in level 3.
@@ -113,7 +124,7 @@ C2 will not be marked and carries no penalties or scores. However, the following
     
 14. If you are performing semi-automatic navigation, the waypoints you can provide are x,y coordinates, you can't specify driving instructions, such as distance / time to drive or turning angles
     
-15. Only a [qualified navigation run](../Week07-08/M3_marking.md#evaluation) will receive marks for navigation
+15. **[New]** A [qualified navigation run](../Week11/README.md#4-qualified-navigation-run-and-penalty-scheme-changes) will receive marks for navigation, however a run can still only be stopped manually once the run is qualified
     
 16. You will need to submit "slam.txt" and "targets.txt" (after renaming them according to the attempt number and robot autonomy type) to the Moodle submission box at the end of your live demo marking for arena mapping evaluation
 	- The map submission has to be completed within the specified time. If you didn't submit the maps within the allocated time you will receive 0pt for arena mapping
@@ -122,7 +133,6 @@ C2 will not be marked and carries no penalties or scores. However, the following
     - Your files must also follow the specified naming conventions specified in [Step 3](#step-3) of the marking steps
 
 17.  You will not be allowed to run your code within any **cloud-based folders (e.g OneDrive, iCloud etc.)** due to potential issues with file permissions
-
 
 ---
 ## Marking steps
@@ -178,6 +188,10 @@ There two key tasks, mapping (ArUco markers + object locations) and navigation. 
 
 6. For semi-auto navigation, you may enter as many waypoints as you want. For full-auto navigation, you can only input a single command to start the process
     - You will receive zero score if we find out that you are teleoperating the robot during navigation
+
+7. Repeat any level as many times as you want until the time limit
+
+8. Individual viva (short verbal assessment with the demonstrator) will be conducted, which will be used to scale your mark. See [example est map](../Week02-04/M1_marking_instructions.md) for more information. Furthermore, the same ITP across M2 and M3 will be used to scale your final M3 mark. Your total for M3 will be:
 
 #### Step 4:
 **Right after marking**

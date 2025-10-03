@@ -5,20 +5,25 @@
 
 **Please note that all skeleton codes provided are **for references only** and are intended to get you started. They are not guaranteed to be bug-free either. To get better performance please make changes or write your own codes and test cases. As long as your codes perform the task and generate estimation maps that can be marked according to the evaluation schemes and scripts you are free to modify the skeleton codes.**
 
+## Key Changes for Final Demo
+With the release of the final demo, we just want to highlight some key changes in this document:
+- The in-order requirement is now removed from level 2
+- Restated 1 set of maps per run requirement
+
 ---
 ## Introduction
 Checkpoint 2 (C2) is designed to give you time to integrate all of the modules you completed in the previous milestones and an opportunity to practice the final demo. It integrates your work from M1 to M3 so that the robot can create a map of the arena containing the estimated poses of 10 ArUco markers ([M1: SLAM](../Week02-04/)), 10 objects ([M2: Object Recognition and Localisation](../Week05-06/)), to then perform the grocery shopping task ([M3: navigation](../Week07-08/)). 
 
 For **C2**, we will ask that you go through the whole marking process for the **final demo**, including download from Moodle and map upload, to ensure that your team has practice with the marking procedure for it. The procedure will not be marked or timed and is also designed as an opportunity to provide specific instruction on the logistics of the **Final Demo** and so will not involve proper attempts at the task. This will involve TAs viewing the file structure of your code submissions, the locations that the code is running in, how to name and submit your mapping files and any other logistics around the final demo. 
 
-For the **Final Demo**, you will be given a shopping list of 5 targets, your task is to perform SLAM, localise objects and navigate to the given list of fruits&vegs in order, while avoiding obstacles along the way. The robot should attempt to stop within 0.3m radius of the target for 2 seconds before moving onto the next target.
-- **A true map will NOT be provided in the final demo**, only a shopping list will be provided indicating which 5 targets are to be reached in which order
-- You may teleoperate your robot (C1) to first generate a map of the arena with your own SLAM (M1) and detector (M2) before performing the navigation (M3), however you will be able to be awarded more marks if you can map the arena autonomously.
+For the **Final Demo**, you will be given a shopping list of 5 targets, your task is to perform SLAM, localise objects and navigate to the given list of fruits&vegs, while avoiding obstacles along the way. The robot should attempt to stop within 0.3m radius of the intended target for 2 seconds before moving onto the next target. You need to indicate your intended target, via terminal or other means you have mentioned to the TA.
+- **A true map will NOT be provided in the final demo**, only a shopping list will be provided indicating which 5 targets are to be reached and in which order if applicable
+- You may teleoperate your robot (C1) to first generate a map of the arena with your own SLAM (M1) and detector (M2) before performing the navigation (M3), however you will be awarded more marks if you can map the arena autonomously (level 3).
 - There will be 10 ArUco markers and 10 objects (5 as navigation targets, 5 as obstacles) in the arena. Similar to M3, the targets on the shopping list will be unique while the obstacles may contain duplicates.
 
 For the final demo, the task will be separated into 3 levels. These levels are:
 - Level 1: Manual Mapping and Fully-Autonomous Navigation
-- Level 2: Manual Mapping and Fully-Autonomous Navigation with object swapping.
+- Level 2: Manual Mapping and Fully-Autonomous Navigation with object displacement.
 - Level 3: Fully-Autonomous Mapping and Navigation
 
 For Levels 1 and 2, the mapping and navigation will be considered as 2 separate tasks and marks for mapping and navigation will be calculated separately. For level 3, the score for mapping and navigation will be calculated together for each attempted level 3 run. In the final demo, your score would then be the highest score of your:
@@ -42,6 +47,10 @@ or your:
     - targets_manual_1.txt
     - targets_manual_2.txt
     - targets_auto_2.txt
+- You are only allowed to submit one slam.txt and one targets.txt per attempt. We take the best slams.txt and targets.txt from one attempt, and navigation score from another attempt and from the same level requirements. This means you cannot:
+    - Mix a level 3 navigation score with a manual mapping (level 1/2) score.
+    - Mix a level 3 mapping score with a level 1/2 navigation score.
+    - Mix a level 3 navigation score with the mapping score of another level 3 attempt.
 - We understand that this can be a lot to do during a short window of your Final Demo, which is why C2 is in place to give you a risk-free opportunity to practice the demonstration and submission process.
 - **PLEASE COMMENT YOUR CODE**. We do perform spot checks and this allows us to identify if there are, or clear your team of, any potential academic integrity issues in your submission.
 
@@ -55,7 +64,7 @@ Below are some suggestions on how you may improve your integrated system and liv
 - Make sure you have included everything required to run your demo in the submission. If you can't run the demo from your downloaded submission we can't allow you to run from your local working directory or make changes to your codes.
 - Practice the marking demo steps so that you are familiar with it. This includes downloading into an empty folder, practicing the Final Demo within this folder, renaming and numbering the slam and targets maps and zipping these maps in a single folder.
     - Further details on how you will be marked will be provided within the Final Demo page (Week11), however the setup process (e.g code download and demo runtime) will not significantly differ from prior assessments.
-- Consider having a back-up driver in case the lead person running the demo has any kind of unexpected emergencies
+- Consider having a back-up driver and laptop in case the lead person running the demo has any kind of unexpected emergencies
 - Ensure that your code is only referring to files within the local folder (i.e no absolute files paths)
 
 
@@ -86,7 +95,6 @@ Below are some suggestions on how you may improve your integrated system and liv
 - Improve your detector's ability to merge multiple observations of the same object vs. seeing duplicates in the obstacles
 
 ### Navigation
-- If you are taking the semi-auto waypoint navigation approach, improve the map visualization for interactively specifying waypoints during delivery and verifying whether the robot stops inside / outside the 0.5m radius of a target
 - During navigation, consider including opportunities for the robot to self-correct its path or reset its location in the arena to prevent errors from accumulating
 - Make use of your SLAM component to continuously correct pose estimation and update the path planning
 - Make use of visual information to improve the pose estimation and path planning. For example, keeping an object in the centre of the robot's view when driving towards it

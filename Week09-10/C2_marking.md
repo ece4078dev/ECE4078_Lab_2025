@@ -5,7 +5,7 @@
 - [Marking steps](#marking-steps)
 - [Marking checklist](#marking-checklist)
 
-The final demo is likely to be the same as C2, although minor details/rules/marking scheme are still subject to change. **PLEASE MAKE SURE YOU READ THE MARKING INSTRUCTIONS CAREFULLY.**
+The final demo is now released and C2 will allow you to understand the details of the final demo. **PLEASE MAKE SURE YOU READ THE MARKING INSTRUCTIONS CAREFULLY.**
 
 ## Key Changes for Final Demo
 With the release of the final demo, we just want to highlight some key changes in this document:
@@ -13,10 +13,11 @@ With the release of the final demo, we just want to highlight some key changes i
 - Added clarification for how different runs are scored
 - Link to the definition of qualified runs, in [Week11/README.md](../Week11/README.md#4-qualified-navigation-run-and-penalty-scheme-changes) are now included, note that this is slightly different from M3
 - Included reference to Viva being included in final demo
+- Include estimated time to complete C2
 
 ---
 ## Marking schemes
-C2 does not carry any weight in your grades. It is designed to ensure that you know everything necessary to attempt the final demo and give you time and demonstrate areas to improve. Please go to the [marking scheme](../Week11/README.md#3-marking-scheme-breakdown) in the final demo folder for more details.
+C2 does not carry any weight in your grades. You will be given ~10mins to go though the process of marking for C2. It is designed to ensure that you know everything necessary to attempt the final demo and give you time and demonstrate areas to improve. Please go to the [marking scheme](../Week11/README.md#3-marking-scheme-breakdown) in the final demo folder for more details.
 
 ---
 ### Final Demo Task
@@ -209,7 +210,7 @@ There two key tasks, mapping (ArUco markers + object locations) and navigation. 
 - [ ] Calibrate the robot if needed
 - [ ] Connect your Wifi to eduroam/internet so you are ready to download the submission
 
-**During the marking** (20min time limit)
+**During the marking** (30min time limit for final demo)
 - [ ] Shopping list for your session will be released on slack
 - [ ] Demonstrator will ask you to download your submission and unzip it to "LiveDemo"
 - [ ] Copy the shopping list (and the calibration files if you re-calibrated) to "`~/LiveDemo`"

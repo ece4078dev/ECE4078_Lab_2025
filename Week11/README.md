@@ -6,6 +6,10 @@ The [task](../Week09-10/README.md#introduction) for the final demo is the same a
 ## Marking procedure
 The final demo marking [procedure](../Week09-10/C2_marking.md#marking-steps) and [rules](../Week09-10/C2_marking.md#4-rules) is the same as your trial run in C2. However please look at the key changes in [C2_marking.md](../Week09-10/C2_marking.md#key-changes-for-final-demo) and the [README.md](../Week09-10/README.md#key-changes-for-final-demo) in Week09-10.
 
+
+## Changelist
+- Clarified object localisation marking formula to replace references to target with object
+	- Object localisation scores against all objects in the environment 
 ---
 
 ## Final Demo marking scheme
@@ -41,16 +45,16 @@ For Levels 1 and 2, mapping and Navigation are treated as 2 separate tasks and y
 ### 3. Marking scheme breakdown
 The Final Demonstration contributes 60% of the overall unit grade. This is divided into the following components with the mark breakdown out of 100%:
 
-1. SLAM (M1) – 15/100:
+1. SLAM Mapping Component (M1) – 15/100:
   * Assessed using scaled [marking formula](../Week02-04/M1_marking_instructions.md#Evaluation-scheme) from Milestone 1:
     * slam_rating = ((0.2 - Aligned_RMSE)/(0.2 - 0.02))
     * slam_score = (base^slam_rating - 1)/(base -1) * 15, where base = 16
 
-2. Target List (M2) – 15/100:
+2. Object Localisation Mapping Component (M2) – 15/100:
   * Assessed using scaled [marking formula](../Week05-06/M2_marking.md#Evaluation) from Milestone 2:  
-    * target_accuracy_rating[object] = (0.5 - estimation_error[object])/(0.5-0.025)
-    * target_est_score = (base^mean(target_accuracy_rating) - 1)/(base - 1) * level_scale - 5 x NumberOfCollisions
-    * 0 ≤ target_est_score ≤ level_scale
+    * object_accuracy_rating[object] = (0.5 - estimation_error[object])/(0.5-0.025)
+    * object_est_score = (base^mean(object_accuracy_rating) - 1)/(base - 1) * level_scale - 5 x NumberOfCollisions
+    * 0 ≤ object_est_score ≤ level_scale
 
 3. Navigation – 70/100:  
    * The following marks are allocated for qualified runs and successful collections. Note that there are some small changes to the definition for a qualified run described in [Section 4](#4-qualified-navigation-run-and-penalty-scheme-changes).
@@ -70,7 +74,7 @@ The Final Demonstration contributes 60% of the overall unit grade. This is divid
      + Each successful collection (within 0.3 m, in any order) is worth 8 marks.  
      + Maximum contribution: 100% of the Navigation mark (i.e. full 70%).  
      
-4. Overall Mark = (slam_score + targets_score + navigation_score) * Viva_Factor * ITP_Factor
+4. Overall Mark = (slam_score + object_est_score + navigation_score) * Viva_Factor * ITP_Factor
   * **Note that students that do not fill in the Viva will have their ITP factor capped at 0.9**
 
 ### 4. Qualified navigation run and penalty scheme changes

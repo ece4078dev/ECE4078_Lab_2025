@@ -44,7 +44,7 @@ Either way, we will evaluate your ```slam.txt``` and ```targets.txt``` for arena
 │   ├── targets_manual_2.txt 
 ```
 
-Similar to M3, there wil be penalties for collisions with markers or objects. In a mapping run, you are allowed a maximum of three penalties (collision or out-of-boundary). The third time a penalty happens that run is terminated and will not qualify for map marking. You must start at the origin (0, 0, 0).
+Similar to M3, there wil be penalties for collisions with markers or objects. Collisions in mapping for levels 1 and 2 does not apply a penalty, unless there is an excessive amount of collisions. Collision penalties apply for the entirety of level 3 during the autonomous run. 
 
 Your SLAM and object maps can be evaluated using [mapping_eval.py](../Week05-06/mapping_eval.py). If your estimation maps are not in the expected format and cannot be compared against a groundtruth map ([example groundtruth map](../Week07-08/M3_prac_map_full.txt)) by the evaluation script you will receive 0pt for arena mapping.
 

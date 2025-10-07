@@ -9,7 +9,8 @@ The final demo marking [procedure](../Week09-10/C2_marking.md#marking-steps) and
 
 ## Changelist
 - Clarified object localisation marking formula to replace references to target with object
-	- Object localisation scores against all objects in the environment 
+	- Object localisation scores against all objects in the environment
+ - Removed references to collision penalties in object estimation marking formula
 ---
 
 ## Final Demo marking scheme
@@ -49,12 +50,13 @@ The Final Demonstration contributes 60% of the overall unit grade. This is divid
   * Assessed using scaled [marking formula](../Week02-04/M1_marking_instructions.md#Evaluation-scheme) from Milestone 1:
     * slam_rating = ((0.2 - Aligned_RMSE)/(0.2 - 0.02))
     * slam_score = (base^slam_rating - 1)/(base -1) * 15, where base = 16
+    * 0 ≤ slam_score ≤ 15
 
 2. Object Localisation Mapping Component (M2) – 15/100:
   * Assessed using scaled [marking formula](../Week05-06/M2_marking.md#Evaluation) from Milestone 2:  
     * object_accuracy_rating[object] = (0.5 - estimation_error[object])/(0.5-0.025)
-    * object_est_score = (base^mean(object_accuracy_rating) - 1)/(base - 1) * level_scale - 5 x NumberOfCollisions
-    * 0 ≤ object_est_score ≤ level_scale
+    * object_est_score = (base^mean(object_accuracy_rating) - 1)/(base - 1) * 15
+    * 0 ≤ object_est_score ≤ 15
 
 3. Navigation – 70/100:  
    * The following marks are allocated for qualified runs and successful collections. Note that there are some small changes to the definition for a qualified run described in [Section 4](#4-qualified-navigation-run-and-penalty-scheme-changes).

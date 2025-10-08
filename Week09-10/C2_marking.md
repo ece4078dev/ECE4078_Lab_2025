@@ -17,7 +17,7 @@ With the release of the final demo, we just want to highlight some key changes i
 
 ---
 ## Marking schemes
-C2 does not carry any weight in your grades. You will be given ~10mins to go though the process of marking for C2. It is designed to ensure that you know everything necessary to attempt the final demo and give you time and demonstrate areas to improve. Please go to the [marking scheme](../Week11/README.md#3-marking-scheme-breakdown) in the final demo folder for more details.
+C2 does not carry any weight in your grades. It is designed to ensure that you know everything necessary to attempt the final demo and give you time and demonstrate areas to improve. Please go to the [marking scheme](../Week11/README.md#3-marking-scheme-breakdown) in the final demo folder for more details.
 
 ---
 ### Final Demo Task
@@ -45,7 +45,7 @@ Either way, we will evaluate your ```slam.txt``` and ```targets.txt``` for arena
 │   ├── targets_manual_2.txt 
 ```
 
-Similar to M3, there wil be penalties for collisions with markers or objects. Collisions in mapping for levels 1 and 2 does not apply a penalty, unless there is an excessive amount of collisions. Collision penalties apply for the entirety of level 3 during the autonomous run. 
+Similar to M3, there wil be penalties for collisions with markers or objects. In a mapping run, you are allowed a maximum of three penalties (collision or out-of-boundary). The third time a penalty happens that run is terminated and will not qualify for map marking. You must start at the origin (0, 0, 0).
 
 Your SLAM and object maps can be evaluated using [mapping_eval.py](../Week05-06/mapping_eval.py). If your estimation maps are not in the expected format and cannot be compared against a groundtruth map ([example groundtruth map](../Week07-08/M3_prac_map_full.txt)) by the evaluation script you will receive 0pt for arena mapping.
 
@@ -82,7 +82,10 @@ The final demo is separated into three levels, these levels are:
 	- You may navigate to objects in any order
 	- You are still provided a shopping list, but you do not need to navigate to the targets in the same order as the list. Due to the removal of shopping list order, you must clearly indicate if the robot is stopping for an object by printing the label of the specified object to terminal and notifying the TA of the robot's intention to stop at the specific target. 
 
-For Levels 1 and 2, mapping and Navigation are treated as 2 separate tasks and you can attempt mapping and navigation runs in any order given a mapping run comes first. For level 3, mapping and navigation are considered a single combined task. An example order for the final demo could be to manually map once, attempt navigation twice, map again and then attempt simultaneous mapping and navigation (level 3) for a total of 5 runs (2 manual mapping runs, 2 autonomous navigation runs and 1 simultaneous mapping and navigation run). Inbetween any run, the arena will be reset (or rearranged in the case of swapping from level 2 navigation to any other task) for the current task.
+For Levels 1 and 2, mapping and Navigation are treated as 2 separate tasks and you can attempt mapping and navigation runs in any order given a mapping run comes first. For level 3, mapping and navigation are considered a single combined task. An example order for the final demo could be to manually map once, attempt navigation twice, map again and then attempt simultaneous mapping and navigation (level 3) for a total of 5 runs (2 manual mapping runs, 2 autonomous navigation runs and 1 simultaneous mapping and navigation run). Inbetween any run, the arena will be reset (or rearranged in the case of displacing fruits/veg from level 2 navigation to any other task) for the current task. In the final demo, your score would then be the highest score of your:
+- Highest scoring manually generated set of maps added with the highest scoring level 1/2 navigation run
+or your:
+- Highest scoring Level 3 attempt (slam_score + object_est_score + navigation score)
 
 
 ### General Rules

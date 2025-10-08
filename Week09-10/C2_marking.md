@@ -26,7 +26,7 @@ The final demo task will consist of both mapping and navigation components and w
 ---
 
 ### Evaluation
-We have divided C2 into two components:
+We have divided Final Demo into two components:
 1. Arena mapping
 2. Grocery shopping
 

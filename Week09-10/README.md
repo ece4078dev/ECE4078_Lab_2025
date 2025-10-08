@@ -26,11 +26,10 @@ For the final demo, the task will be separated into 3 levels. These levels are:
 - Level 2: Manual Mapping and Fully-Autonomous Navigation with object displacement.
 - Level 3: Fully-Autonomous Mapping and Navigation
 
-For Levels 1 and 2, the mapping and navigation will be considered as 2 separate tasks and marks for mapping and navigation will be calculated separately. For level 3, the score for mapping and navigation will be calculated together for each attempted level 3 run. In the final demo, your score would then be the highest score of your:
-- Highest scoring manually generated set of maps added with the highest scoring level 1/2 run
+For Levels 1 and 2, mapping and Navigation are treated as 2 separate tasks and you can attempt mapping and navigation runs in any order given a mapping run comes first. For level 3, mapping and navigation are considered a single combined task. An example order for the final demo could be to manually map once, attempt navigation twice, map again and then attempt simultaneous mapping and navigation (level 3) for a total of 5 runs (2 manual mapping runs, 2 autonomous navigation runs and 1 simultaneous mapping and navigation run). Inbetween any run, the arena will be reset (or rearranged in the case of displacing fruits/veg from level 2 navigation to any other task) for the current task. In the final demo, your score would then be the highest score of your:
+- Highest scoring manually generated set of maps added with the highest scoring level 1/2 navigation run
 or your:
-- Highest scoring Level 3 attempt (mapping score + navigation score)
-
+- Highest scoring Level 3 attempt (slam_score + object_est_score + navigation score)
 **The final demo will follow the same procedure** that C2 allows teams to practice the marking steps and also allow teams and TAS identify any potential logistical issues which teams could face.
 
 **Important notes**:

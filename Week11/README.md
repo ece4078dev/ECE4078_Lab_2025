@@ -12,6 +12,7 @@ The final demo marking [procedure](../Week09-10/C2_marking.md#marking-steps) and
 	- Object localisation scores against all objects in the environment
  - Removed references to collision penalties in object estimation marking formula
  - Added line referring to how best score is calculated across levels
+ - Correct SLAM marking formula to scale mark based on number of markers
 ---
 
 ## Final Demo marking scheme
@@ -42,7 +43,9 @@ The final demo is separated into three levels, these levels are:
 	- You may navigate to objects in any order
 	- You are still provided a shopping list, but you do not need to navigate to the targets in the same order as the list. Due to the removal of shopping list order, you must clearly indicate if the robot is stopping for an object by printing the label of the specified object to terminal and notifying the TA of the robot's intention to stop at the specific target. 
 
-For Levels 1 and 2, mapping and Navigation are treated as 2 separate tasks and you can attempt mapping and navigation runs in any order given a mapping run comes first. For level 3, mapping and navigation are considered a single combined task. An example order for the final demo could be to manually map once, attempt navigation twice, map again and then attempt simultaneous mapping and navigation (level 3) for a total of 5 runs (2 manual mapping runs, 2 autonomous navigation runs and 1 simultaneous mapping and navigation run). Inbetween any run, the arena will be reset (or rearranged in the case of displacing fruits/veg from level 2 navigation to any other task) for the current task. In the final demo, your score would then be the highest score of your:
+For Levels 1 and 2, mapping and Navigation are treated as 2 separate tasks and you can attempt mapping and navigation runs in any order given a mapping run comes first. For level 3, mapping and navigation are considered a single combined task. An example order for the final demo could be to manually map once, attempt navigation twice, map again and then attempt simultaneous mapping and navigation (level 3) for a total of 5 runs (2 manual mapping runs, 2 autonomous navigation runs and 1 simultaneous mapping and navigation run). Inbetween any run, the arena will be reset (or rearranged in the case of displacing fruits/veg from level 2 navigation to any other task) for the current task.
+
+For Levels 1 and 2, the mapping and navigation will be considered as 2 separate tasks and marks for mapping and navigation will be calculated separately. For level 3, the score for mapping and navigation will be calculated together for each attempted level 3 run. In the final demo, your score would then be the highest score of your:
 - Highest scoring manually generated set of maps added with the highest scoring level 1/2 navigation run
 or your:
 - Highest scoring Level 3 attempt (slam_score + object_est_score + navigation score)
@@ -53,7 +56,7 @@ The Final Demonstration contributes 60% of the overall unit grade. This is divid
 1. SLAM Mapping Component (M1) – 15/100:
   * Assessed using scaled [marking formula](../Week02-04/M1_marking_instructions.md#Evaluation-scheme) from Milestone 1:
     * slam_rating = ((0.2 - Aligned_RMSE)/(0.2 - 0.02))
-    * slam_score = (base^slam_rating - 1)/(base -1) * 15, where base = 16
+    * slam_score = (base^slam_rating - 1)/(base -1) * 15 * NumberOfFoundMarkers/NumberOfMarkers, where base = 16
     * 0 ≤ slam_score ≤ 15
 
 2. Object Localisation Mapping Component (M2) – 15/100:

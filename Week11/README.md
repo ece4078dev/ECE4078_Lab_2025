@@ -89,11 +89,11 @@ The Final Demonstration contributes 60% of the overall unit grade. This is divid
 ### 4. Qualified navigation run and penalty scheme changes
 
 - For Level 1, a qualified navigation run requires 3 **valid navigation attempts** to targets in the order specified in the shopping list.  
-- For Level 2/3, a qualified navigation run requires 3 or 4 (respectively) **valid navigation attempts** to targets in the shopping list in any order.  
+- For Level 2/3, a qualified navigation run requires 3 **valid navigation attempts** to targets in the shopping list in any order.  
 - For each target a **valid navigation attempt** is defined by the whole robot stopping within 0.5m of the center of the object. Marks are only awarded if the robot stops within 0.3 m of the target.  
 
 - Stopping the run  
-  * After meeting the qualification threshold (3 or 4 targets, depending on level), the run may be stopped at any time, either manually or when the program ends, and the marks earned so far will be retained.  
+  * After meeting the qualification threshold (3 targets, depending on level), the run may be stopped at any time, either manually or when the program ends, and the marks earned so far will be retained.  
   * For example, in a Level 1 run, if the robot successfully navigates to the first two targets (within 0.3 m) but only stops within 0.5 m of the third, the run still qualifies. The score would be 15 points for a qualified run plus 5 points for each of the two successful targets, totalling 25 points.  
 - Similarly to M3, qualification marks cannot be effected by penalties.
 

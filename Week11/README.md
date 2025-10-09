@@ -106,7 +106,7 @@ The Final Demonstration contributes 60% of the overall unit grade. This is divid
     - Any manual interference with program execution after the run is launched with a single command will immediately terminate that run.  
 
 ### 5. Individual contributions to team and mark scaling
-- The 3rd and last ITP survey will be open from 10am 27 Oct to 6pm 31 Oct. The results will be used to inform the individual scaling factors applied to thr Final Demo's team scores. **Failure to complete this will result in your mark being capped to 0.9.** 
+- The 3rd and last ITP survey will be open from 10am 17 Oct to 11:55pm 24 Oct. The results will be used to inform the individual scaling factors applied to thr Final Demo's team scores. **Failure to complete this will result in your mark being capped to 0.9.** 
 - We will conduct individual vivas and code reviews as part of the final assessment to understand an individual's contribution to the team. The viva results will be used to adjust the individual scaling factor. The vivas will be scheduled during your final demo session.  
 
 ### 6. Other

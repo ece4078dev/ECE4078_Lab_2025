@@ -51,7 +51,7 @@ or your:
     - targets_manual_2.txt
     - targets_auto_2.txt
 - You are only allowed to submit one slam.txt and one targets.txt per attempt.
-- **[New]** We take the best slams.txt and targets.txt from any attempt and best level 1/2 navigation score from another attempt or the best scored level 3 attempt. THis means you cannot:
+- **[New]** We take the best slams.txt and targets.txt from any attempt and best level 1/2 navigation score from another attempt or the best scored level 3 attempt. This means you cannot:
     - Mix a level 3 navigation score with a manual mapping (level 1/2) score.
     - Mix a level 3 navigation score with the mapping score of another level 3 attempt.
 - We understand that this can be a lot to do during a short window of your Final Demo, which is why C2 is in place to give you a risk-free opportunity to practice the demonstration and submission process.

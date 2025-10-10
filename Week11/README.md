@@ -13,6 +13,10 @@ The final demo marking [procedure](../Week09-10/C2_marking.md#marking-steps) and
  - Removed references to collision penalties in object estimation marking formula
  - Added line referring to how best score is calculated across levels
  - Correct SLAM marking formula to scale mark based on number of markers
+ - Allow autonomous maps generated in level 3 to be used for level 1/2 navigation and scoring (maps can be downgraded to a lower level for the purpose of usage and scoring)
+ - Allowing level 3 (auto) maps to be used for level 1/2 navigation and scoring
+ - Added clarification that marks will be awarded (assuming non-zero score) if the program stops running, even if a **qualified run** is not achieved
+ - Explicitly allowing a stop button to terminate a run 
 ---
 
 ## Final Demo marking scheme
@@ -43,10 +47,8 @@ The final demo is separated into three levels, these levels are:
 	- You may navigate to objects in any order
 	- You are still provided a shopping list, but you do not need to navigate to the targets in the same order as the list. Due to the removal of shopping list order, you must clearly indicate if the robot is stopping for an object by printing the label of the specified object to terminal and notifying the TA of the robot's intention to stop at the specific target. 
 
-For Levels 1 and 2, mapping and Navigation are treated as 2 separate tasks and you can attempt mapping and navigation runs in any order given a mapping run comes first. For level 3, mapping and navigation are considered a single combined task. An example order for the final demo could be to manually map once, attempt navigation twice, map again and then attempt simultaneous mapping and navigation (level 3) for a total of 5 runs (2 manual mapping runs, 2 autonomous navigation runs and 1 simultaneous mapping and navigation run). Inbetween any run, the arena will be reset (or rearranged in the case of displacing fruits/veg from level 2 navigation to any other task) for the current task.
-
-For Levels 1 and 2, the mapping and navigation will be considered as 2 separate tasks and marks for mapping and navigation will be calculated separately. For level 3, the score for mapping and navigation will be calculated together for each attempted level 3 run. In the final demo, your score would then be the highest score of your:
-- Highest scoring manually generated set of maps added with the highest scoring level 1/2 navigation run
+For Levels 1 and 2, mapping and Navigation are treated as 2 separate tasks and you can attempt mapping and navigation runs in any order given a mapping run comes first. For level 3, mapping and navigation are considered a single combined task. An example order for the final demo could be to manually map once, attempt navigation twice, map again and then attempt simultaneous mapping and navigation (level 3) for a total of 5 runs (2 manual mapping runs, 2 autonomous navigation runs and 1 simultaneous mapping and navigation run). Inbetween any run, the arena will be reset (or rearranged in the case of displacing fruits/veg from level 2 navigation to any other task) for the current task. In the final demo, your score would then be the highest score of your:
+- Highest scoring set of maps (auto or manual) added with the highest scoring level 1/2 navigation run
 or your:
 - Highest scoring Level 3 attempt (slam_score + object_est_score + navigation score)
 
@@ -93,9 +95,11 @@ The Final Demonstration contributes 60% of the overall unit grade. This is divid
 - For each target a **valid navigation attempt** is defined by the whole robot stopping within 0.5m of the center of the object. Marks are only awarded if the robot stops within 0.3 m of the target.  
 
 - Stopping the run  
-  * After meeting the qualification threshold (3 targets, depending on level), the run may be stopped at any time, either manually or when the program ends, and the marks earned so far will be retained.  
-  * For example, in a Level 1 run, if the robot successfully navigates to the first two targets (within 0.3 m) but only stops within 0.5 m of the third, the run still qualifies. The score would be 15 points for a qualified run plus 5 points for each of the two successful targets, totalling 25 points.  
-- Similarly to M3, qualification marks cannot be effected by penalties.
+  * The run may be **stopped manually only after meeting the qualification threshold of 3 targets** or when the program ends, and the marks earned so far will be retained.  
+  * For example:
+  	* In a Level 1 run, if the robot successfully navigates to the first two targets (within 0.3 m) but only stops within 0.5 m of the third, the run still qualifies. The score would be 15 points for a qualified run plus 5 points for each of the two successful targets, totalling 25 points.
+  	* In a level 3 run, if the robot only successfully navigated to the first two targets (within 0.3 m) and does not make a valid attempt to any remaining targets and program stops (either by crashing or finishing the program), your team is still awarded 16 marks but receives no qualified run marks.
+- Similarly to M3, qualification marks cannot be effected by penalties nor can your score for the navigation component be negative.
 
 - Collision rules and penalties  
   * The same collision rules and penalties as in M3 will apply.  
@@ -103,7 +107,8 @@ The Final Demonstration contributes 60% of the overall unit grade. This is divid
   * For Levels 1 and 2 mapping runs:  
     - Penalties do not apply to mapping runs, however you cannot reset the arena during a mapping run.  
   * For Level 3 and Level 1/2 Navigation runs:   
-    - Any manual interference with program execution after the run is launched with a single command will immediately terminate that run.  
+    - Any manual interference with program execution after the run is launched with a single command will immediately terminate that run.
+    	- **[New]** A button to stop the robot is allowed to terminate the run but the same rules about gaining marks apply 
 
 ### 5. Individual contributions to team and mark scaling
 - The 3rd and last ITP survey will be open from 10am 17 Oct to 11:55pm 24 Oct. The results will be used to inform the individual scaling factors applied to thr Final Demo's team scores. **Failure to complete this will result in your mark being capped to 0.9.** 
@@ -117,7 +122,7 @@ The Final Demonstration contributes 60% of the overall unit grade. This is divid
 
 ## Further clarifications and FAQs
 
-Below are issues that we have seen during teams' C2 runs which may be helpful to address:
+Below are issues that we have seen during teams' final demo runs in the past which may be helpful to address:
 
 1. Have a back-up plan. For example, implement a command line argument for switching between running semi or full auto navigation in case the full auto navigation crashes on the day. Also have a back-up driver and laptop.  
 2. Parameter tuning: check your wheel and camera parameters, YOLO confidence, SLAM covariance, radius around markers and objects for creating occupancy map, etc. We recommend recalibrating the wheel and camera during the Week 11 labs and check to make sure that your calibrated parameters are close to the [default parameters](../Week02-04/calibration/param/).  

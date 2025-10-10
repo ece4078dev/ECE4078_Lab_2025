@@ -9,6 +9,8 @@
 With the release of the final demo, we just want to highlight some key changes in this document:
 - The in-order requirement is now removed from level 2
 - Restated 1 set of maps per run requirement
+- Allow autonomous maps generated in level 3 to be used for level 1/2 navigation and scoring (maps can be downgraded to a lower level for the purpose of usage and scoring)
+- Explicitly allow multiple folders for the different levels
 
 ---
 ## Introduction
@@ -27,9 +29,10 @@ For the final demo, the task will be separated into 3 levels. These levels are:
 - Level 3: Fully-Autonomous Mapping and Navigation
 
 For Levels 1 and 2, mapping and Navigation are treated as 2 separate tasks and you can attempt mapping and navigation runs in any order given a mapping run comes first. For level 3, mapping and navigation are considered a single combined task. An example order for the final demo could be to manually map once, attempt navigation twice, map again and then attempt simultaneous mapping and navigation (level 3) for a total of 5 runs (2 manual mapping runs, 2 autonomous navigation runs and 1 simultaneous mapping and navigation run). Inbetween any run, the arena will be reset (or rearranged in the case of displacing fruits/veg from level 2 navigation to any other task) for the current task. In the final demo, your score would then be the highest score of your:
-- Highest scoring manually generated set of maps added with the highest scoring level 1/2 navigation run
+- Highest scoring set of maps (auto or manual) added with the highest scoring level 1/2 navigation run
 or your:
 - Highest scoring Level 3 attempt (slam_score + object_est_score + navigation score)
+
 **The final demo will follow the same procedure** that C2 allows teams to practice the marking steps and also allow teams and TAS identify any potential logistical issues which teams could face.
 
 **Important notes**:
@@ -39,6 +42,7 @@ or your:
     - Training Images
     - Old mapping outputs (slam.txt, targets.txt etc.)
     - Folders from prior milestones (e.g do not include Week00-01, Week02-04 etc.)
+        - Note that you can have separate folders for your code submission, we just ask that there is a clear purpose for either folder (e.g for different level attempts rather than including every version of your codebase) 
 - For map submissions in the final demo, we will require you that you label and number your mapping output files as "slam_manual_{mapping_no}.txt" and "targets_manual_{mapping_no}.txt" for manually generated map pairs or as "slam_auto_{navigation_no}.txt" and "targets_{navigation_no}.txt" for autonomously generated map pairs. For example, if you perform two manual mapping runs, attempt Level 1 navigation and then a level 3 fully autonomous mapping and navigation run, in that order, the files would be labeled:
     - slam_manual_1.txt
     - slam_manual_2.txt
@@ -46,9 +50,9 @@ or your:
     - targets_manual_1.txt
     - targets_manual_2.txt
     - targets_auto_2.txt
-- You are only allowed to submit one slam.txt and one targets.txt per attempt. We take the best slams.txt and targets.txt from one attempt, and navigation score from another attempt and from the same level requirements. This means you cannot:
+- You are only allowed to submit one slam.txt and one targets.txt per attempt.
+- **[New]** We take the best slams.txt and targets.txt from any attempt and best level 1/2 navigation score from another attempt or the best scored level 3 attempt. THis means you cannot:
     - Mix a level 3 navigation score with a manual mapping (level 1/2) score.
-    - Mix a level 3 mapping score with a level 1/2 navigation score.
     - Mix a level 3 navigation score with the mapping score of another level 3 attempt.
 - We understand that this can be a lot to do during a short window of your Final Demo, which is why C2 is in place to give you a risk-free opportunity to practice the demonstration and submission process.
 - **PLEASE COMMENT YOUR CODE**. We do perform spot checks and this allows us to identify if there are, or clear your team of, any potential academic integrity issues in your submission.

@@ -14,6 +14,8 @@ With the release of the final demo, we just want to highlight some key changes i
 - Link to the definition of qualified runs, in [Week11/README.md](../Week11/README.md#4-qualified-navigation-run-and-penalty-scheme-changes) are now included, note that this is slightly different from M3
 - Included reference to Viva being included in final demo
 - Include estimated time to complete C2
+- Allow autonomous maps generated in level 3 to be used for level 1/2 navigation and scoring (maps can be downgraded to a lower level for the purpose of usage and scoring)
+- Explicitly allow multiple folders for the different levels
 
 ---
 ## Marking schemes
@@ -83,7 +85,7 @@ The final demo is separated into three levels, these levels are:
 	- You are still provided a shopping list, but you do not need to navigate to the targets in the same order as the list. Due to the removal of shopping list order, you must clearly indicate if the robot is stopping for an object by printing the label of the specified object to terminal and notifying the TA of the robot's intention to stop at the specific target. 
 
 For Levels 1 and 2, mapping and Navigation are treated as 2 separate tasks and you can attempt mapping and navigation runs in any order given a mapping run comes first. For level 3, mapping and navigation are considered a single combined task. An example order for the final demo could be to manually map once, attempt navigation twice, map again and then attempt simultaneous mapping and navigation (level 3) for a total of 5 runs (2 manual mapping runs, 2 autonomous navigation runs and 1 simultaneous mapping and navigation run). Inbetween any run, the arena will be reset (or rearranged in the case of displacing fruits/veg from level 2 navigation to any other task) for the current task. In the final demo, your score would then be the highest score of your:
-- Highest scoring manually generated set of maps added with the highest scoring level 1/2 navigation run
+- Highest scoring set of maps (auto or manual) added with the highest scoring level 1/2 navigation run
 or your:
 - Highest scoring Level 3 attempt (slam_score + object_est_score + navigation score)
 
@@ -117,7 +119,7 @@ C2 will not be marked and carries no penalties or scores. However, the following
 	- You should end your last run ~2min before the time limit, to allow sufficient time to rename and submit the map files
 
 10. Your score will given by choosing the highest score between:
-    - The sum of the best run/attempt in each task within levels 1 and/or 2
+    - **[New]** The best mapping score of all runs/attempts (levels 1-3) added with the best score of all level 1 and/or 2 navigation runs/attempts
     - The best run/attempt of level 3
 
 11. You need to include everything you need for running your demo in your code submission, aside from any python environments. You are not allowed to change anything in the submission files at the time of demo except for the calibrated wheel and camera parameters (baseline.txt, scale.txt, intrinsic.txt, distCoeffs.txt) and will have to run the submission as-is.
@@ -147,7 +149,7 @@ Each team will have a VERY STRICT time limit to get marked, according to the [ma
 ---
 ### Step 1:
 **Do this BEFORE your lab session**
-Zip **all required scripts** and submit your zip to the Moodle submission box. Each group only needs one submission. This submission is due by the starting time of the lab session, which means you should **submit your script BEFORE you come to the lab**. You will not be allowed to perform your live demo if you didn't submit your codes on time. Additionally, attempt to minimise your submission and only include **what is strictly necesssary to run your code**. We will apply penalties if your submission contains considerably more files than is necessary, such as training images.
+Zip **all required scripts** and submit your zip to the Moodle submission box. Each group only needs one submission. This submission is due by the starting time of the lab session, which means you should **submit your script BEFORE you come to the lab**. You will not be allowed to perform your live demo if you didn't submit your codes on time. Additionally, attempt to minimise your submission and only include **what is strictly necesssary to run your code**. We will apply penalties if your submission contains considerably more files than is necessary, such as training images. You are allowed to have multiple folders if that is deemed necessary.
 
 **Tips:** 
 - You may also include a text file in the zip file with a list of commands to use, if you don't know all the commands by heart.
